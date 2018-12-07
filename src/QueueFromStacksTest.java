@@ -8,6 +8,7 @@ import static org.junit.Assert.fail;
 import java.util.NoSuchElementException;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -160,7 +161,7 @@ public class QueueFromStacksTest {
 		String firstWord = words[0];
 		for (String word : words) {
 			this.stringQueue.enqueue(word);
-			assertEquals(firstWord, this.stringQueue.peek());
+			Assert.assertEquals(firstWord, this.stringQueue.peek(), word);
 		}
 		points += 1;
 	}
